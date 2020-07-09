@@ -7,10 +7,8 @@
 
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-[![Travis build
-status](https://travis-ci.com/poissonconsulting/hmstimer.svg?branch=master)](https://travis-ci.com/poissonconsulting/hmstimer)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/hmstimer?branch=master&svg=true)](https://ci.appveyor.com/project/poissonconsulting/hmstimer)
+[![R build
+status](https://github.com/poissonconsulting/hmstimer/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/hmstimer/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/poissonconsulting/hmstimer/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/hmstimer?branch=master)
 [![License:
@@ -19,54 +17,42 @@ MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org
 status](https://tinyverse.netlify.com/badge/hmstimer)](https://CRAN.R-project.org/package=hmstimer)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/hmstimer)](https://cran.r-project.org/package=hmstimer)
-![CRAN downloads](http://cranlogs.r-pkg.org/badges/hmstimer)
+![CRAN downloads](https://cranlogs.r-pkg.org/badges/hmstimer)
 <!-- badges: end -->
 
 `hmstimer` is an R package to track elapsed clock time using a
-[hms()](https://github.com/tidyverse/hms) scalar (inherits from
-difftime() with seconds as the unit).
+[hms::hms](https://github.com/tidyverse/hms) scalar, which if running
+has an attribute named start that specifies the system time when the
+timer was started.
+
+The elapsed time is the value of the scalar plus the difference between
+the current system time and the system time when the timer was started.
 
 ``` r
 library(hmstimer)
 
-t <- tmr_timer()
+tmr <- tmr_timer(seconds = 125, start = TRUE)
+tmr
+#> 00:02:05
+tmr_elapsed(tmr)
+#> 00:02:05.005813
+tmr
+#> 00:02:05
+tmr_elapsed(tmr)
+#> 00:02:05.010475
 
-tmr_elapsed(t)
-#> Time difference of 0 secs
+tmr <- tmr_stop(tmr)
 
-library(hms) # for prettier printing load hms
+tmr
+#> 00:02:05.013098
+tmr_elapsed(tmr)
+#> 00:02:05.013098
 
-tmr_elapsed(t)
-#> 00:00:00
-
-t <- tmr_start(t)
-
-tmr_elapsed(t)
-#> 00:00:00.000857
-tmr_elapsed(t)
-#> 00:00:00.002076
-t <- tmr_stop(t)
-
-# time elapsed is now fixed
-tmr_elapsed(t)
-#> 00:00:00.003408
-tmr_elapsed(t)
-#> 00:00:00.003408
-
-# the timer can be restarted
-t <- tmr_start(t)
-tmr_elapsed(t)
-#> 00:00:00.004273
+tmr_format(tmr, digits = 4)
+#> [1] "00:02:05.0131"
 ```
 
 ## Installation
-
-To install the latest release version from
-[CRAN](https://cran.r-project.org)
-
-``` r
-install.packages("hmstimer")
-```
 
 To install the latest development version from
 [GitHub](https://github.com/poissonconsulting/hmstimer)
@@ -84,6 +70,9 @@ Please report any
 [Pull requests](https://github.com/poissonconsulting/hmstimer/pulls) are
 always welcome.
 
-Please note that this project is released with a [Contributor Code of
-Conduct](https://poissonconsulting.github.io/hmstimer/CODE_OF_CONDUCT.html).
-By contributing, you agree to abide by its terms.
+## Code of Conduct
+
+Please note that the hmstimer project is released with a [Contributor
+Code of
+Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.
