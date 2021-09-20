@@ -1,20 +1,17 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# hmstimer
+# hmstimer <img src="man/figures/logo.png" align="right" />
 
 <!-- badges: start -->
 
 [![Lifecycle:
-maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-[![R build
-status](https://github.com/poissonconsulting/hmstimer/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/hmstimer/actions)
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![R-CMD-check](https://github.com/poissonconsulting/hmstimer/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/hmstimer/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/poissonconsulting/hmstimer/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/hmstimer?branch=master)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![tinyverse
-status](https://tinyverse.netlify.com/badge/hmstimer)](https://CRAN.R-project.org/package=hmstimer)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/hmstimer)](https://cran.r-project.org/package=hmstimer)
 ![CRAN downloads](https://cranlogs.r-pkg.org/badges/hmstimer)
@@ -35,21 +32,19 @@ tmr <- tmr_timer(seconds = 125, start = TRUE)
 tmr
 #> 00:02:05
 tmr_elapsed(tmr)
-#> 00:02:05.005813
+#> 00:02:05.003955
 tmr
 #> 00:02:05
 tmr_elapsed(tmr)
-#> 00:02:05.010475
-
+#> 00:02:05.010815
 tmr <- tmr_stop(tmr)
 
 tmr
-#> 00:02:05.013098
+#> 00:02:05.012567
 tmr_elapsed(tmr)
-#> 00:02:05.013098
-
+#> 00:02:05.012567
 tmr_format(tmr, digits = 4)
-#> [1] "00:02:05.0131"
+#> [1] "00:02:05.0126"
 ```
 
 ## Installation
