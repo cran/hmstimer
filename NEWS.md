@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# hmstimer 0.2.0
+
+- Added `tmr_print()`.
+
+
 # hmstimer 0.1.1
 
 - Removed deprecated `start = FALSE` argument from `tmr_reset()`.
