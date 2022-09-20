@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# hmstimer 0.2.1
+
+- Fix CRAN tests.
+
+
 # hmstimer 0.2.0
 
 - Added `tmr_print()`.

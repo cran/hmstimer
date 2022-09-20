@@ -1,6 +1,6 @@
 Package: hmstimer
 Title: 'hms' Based Timer
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: c(
     person("Joe", "Thorley", , "joe@poissonconsulting.ca", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-7683-4592")),
@@ -22,10 +22,10 @@ Encoding: UTF-8
 Language: en-US
 RoxygenNote: 7.2.1
 NeedsCompilation: no
-Packaged: 2022-08-26 16:13:04 UTC; joe
+Packaged: 2022-09-19 18:25:49 UTC; joe
 Author: Joe Thorley [aut, cre] (<https://orcid.org/0000-0002-7683-4592>),
   Nadine Hussein [ctb] (<https://orcid.org/0000-0003-4470-8361>),
   Poisson Consulting [cph, fnd]
 Maintainer: Joe Thorley <joe@poissonconsulting.ca>
 Repository: CRAN
-Date/Publication: 2022-08-26 16:42:06 UTC
+Date/Publication: 2022-09-20 07:46:22 UTC

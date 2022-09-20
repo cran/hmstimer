@@ -1,7 +1,7 @@
-4223a03b2c976565b2bbf1ddf53b20de *DESCRIPTION
+5d8101770361e3291721cfe51527c762 *DESCRIPTION
 5681489d856e788b5885d1042912c4f4 *LICENSE
 6110da187ef8de1780a14daf0506fc18 *NAMESPACE
-9c4e4ccd1ec106e697dbd319ba855d41 *NEWS.md
+a6600b0afaddec13260aebdb79e4ada0 *NEWS.md
 5bbec468bf128a5293fd91b7f737be9b *R/ceiling.R
 d094fe390db77c7eba20dc02b7895342 *R/chk.R
 d618d676e190f593e8f0520bc946f3f6 *R/elapsed.R
@@ -22,7 +22,7 @@ f02b7bf313584bbea76eaa15754de37f *R/stop.R
 948a3d3a23d4f4de99156deed03c9e2a *R/timer.R
 e0710b812a65366901c79b687166e6fe *R/utils.R
 bedf647bdc9edc38353ba209567911e1 *README.md
-435974e0712e870ef77cde54bdce4e0f *inst/WORDLIST
+25405512001a2c2b6b9bfbbccf574681 *inst/WORDLIST
 cb1e46f469cfbbbde29c8b5113e1d789 *man/figures/lifecycle-archived.svg
 c0d2e5a54f1fa4ff02bf9533079dd1f7 *man/figures/lifecycle-defunct.svg
 a1b8c987c676c16af790f563f96cbb1f *man/figures/lifecycle-deprecated.svg
@@ -52,7 +52,7 @@ b1713b87b725d30f053ad53787634c58 *man/tmr_stop.Rd
 806366a74c9e1613a448825fe9a356fa *tests/testthat/test-ceiling.R
 299df6fbc6f80a2f20e3c7f828005276 *tests/testthat/test-floor.R
 b2b340c48dd7c139075fa1fd896dd386 *tests/testthat/test-format.R
-45413ce79a304d778bac7b5b9cad3e39 *tests/testthat/test-print.R
+8f88b1a00e0ebb602af88242ef28197c *tests/testthat/test-print.R
 daa70c18cdfe1e732ac2cc985e895c35 *tests/testthat/test-reset.R
 b201a80deb2dfd9899ebb5165cd617c9 *tests/testthat/test-round.R
 a379f3f52299d17f9328e374fc39fe6f *tests/testthat/test-timer.R
