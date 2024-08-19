@@ -1,5 +1,5 @@
 chk_digits <- function(digits) {
-  if(is.numeric(digits) && length(digits) == 1L && !anyNA(digits) &&
+  if (is.numeric(digits) && length(digits) == 1L && !anyNA(digits) &&
     (is.integer(digits) || digits == trunc(digits))) {
     return(invisible())
   }
@@ -7,6 +7,13 @@ chk_digits <- function(digits) {
   if (length(digits) != 1L) err("`digits` must be a scalar.")
   if (anyNA(digits)) err("`digits` must not be a missing value.")
   err("`digits` must be a whole number.")
+}
+
+chk_env <- function(env) {
+  if (is.environment(env)) {
+    return(invisible(env))
+  }
+  err("`env` must be an environment.")
 }
 
 chk_seconds <- function(seconds) {
@@ -18,21 +25,34 @@ chk_seconds <- function(seconds) {
   err("`seconds` must not be a missing value.")
 }
 
-chk_start <- function(start) {
-  if (is.logical(start) && length(start) == 1L && !is.na(start)) {
+chk_title <- function(title) {
+  if (is.null(title) || (is.character(title) && length(title) == 1L && !is.na(title))) {
     return(invisible())
   }
-  if (!is.logical(start)) err("`start` must be class logical.")
-  if (length(start) != 1L) err("`start` must be a scalar.")
-  err("`start` must not be a missing value.")
+  if (!is.character(title)) err("`title` must be numeric.")
+  if (length(title) != 1L) err("`title` must be a scalar.")
+  err("`title` must not be a missing value.")
+}
+
+chk_flag <- function(x, name) {
+  if (is.logical(x) && length(x) == 1L && !is.na(x)) {
+    return(invisible())
+  }
+  if (!is.logical(x)) err("`", name, "` must be class logical.")
+  if (length(x) != 1L) err("`", name, "` must be a scalar.")
+  err("`", name, "` must not be a missing value.")
+}
+
+chk_start <- function(start) {
+  chk_flag(start, "start")
 }
 
 chk_x <- function(x) {
-  if (is.hms(x) && length(x) == 1L && !is.na(x)) {
+  if (is_hms(x) && length(x) == 1L && !is.na(x)) {
     return(invisible())
   }
 
-  if (!is.hms(x)) err("`x` must be class hms.")
+  if (!is_hms(x)) err("`x` must be class hms.")
   if (length(x) != 1L) err("`x` must be a scalar.")
   err("`x` must not be a missing value.")
 }

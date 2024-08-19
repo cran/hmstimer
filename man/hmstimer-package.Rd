@@ -8,10 +8,24 @@
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-Tracks elapsed clock time using a `hms::hms()` scalar, which if running has an attribute named start that specifies the system time when the timer was started. The elapsed time is the value of the scalar plus the difference between the current system time and the system time when the timer was started.
+Tracks elapsed clock time using a `hms::hms()` scalar. It was was originally developed to time Bayesian model runs. It should not be used to estimate how long extremely fast code takes to execute as the package code adds a small time cost.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/poissonconsulting/hmstimer}
+  \item \url{https://poissonconsulting.github.io/hmstimer/}
+  \item Report bugs at \url{https://github.com/poissonconsulting/hmstimer/issues}
+}
+
 }
 \author{
 \strong{Maintainer}: Joe Thorley \email{joe@poissonconsulting.ca} (\href{https://orcid.org/0000-0002-7683-4592}{ORCID})
+
+Authors:
+\itemize{
+  \item Kirill Müller \email{kirill@cynkra.com} (\href{https://orcid.org/0000-0002-1416-3412}{ORCID})
+}
 
 Other contributors:
 \itemize{

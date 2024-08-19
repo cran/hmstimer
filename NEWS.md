@@ -1,4 +1,22 @@
-<!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+<!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
+
+# hmstimer 0.3.0
+
+## Features
+
+- Added functions to get, set and test if title
+  - `tmr_title()`
+  - `tmr_title<-`
+  - `tmr_is_titled()`
+  
+- Added `print_title = TRUE` argument to print/format functions
+  - `tmr_print(print_title = TRUE)`
+  - `tmr_format(print_title = TRUE)`
+  
+- Added functions to time individual functions or blocks of code
+  - `local_timer()`
+  - `with_timer()`
+  
 
 # hmstimer 0.2.1
 
